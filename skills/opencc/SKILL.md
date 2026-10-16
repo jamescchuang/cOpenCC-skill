@@ -86,3 +86,9 @@ uv run <skill>/scripts/convert.py --list
 - PyPI 版 `opencc` 1.4.2 不含小篆設定（`s2seal`/`t2seal`/`seal2t`）；如需使用，需自原始碼建置（見 `OpenCC` 原始碼目錄）。
 - `s2hkp`、`hk2sp` 詞庫仍在開發中；`t2jp`/`jp2t` 僅供研究。
 - OpenCC 為詞典式轉換，「一簡對多繁」偶有誤判（如「干」→「幹/乾/干」），重要文件請人工校對。
+
+## 授權與致謝
+
+轉換引擎與詞典來自 [OpenCC](https://github.com/BYVoid/OpenCC)（Copyright 2010-2026 Carbo Kuo and contributors），
+依 [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0) 授權；本 skill 執行時自 PyPI 安裝官方 `opencc` 套件。
+設定說明改寫自 OpenCC 的 README 與設定檔。詳見 repo 根目錄的 `NOTICE` 與 `LICENSES/OpenCC-Apache-2.0.txt`。

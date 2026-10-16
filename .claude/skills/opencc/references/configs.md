@@ -1,6 +1,7 @@
 # OpenCC 內建設定一覽
 
-資料來源：OpenCC 原始碼 `README.md` 與 `data/config/*.json`（PyPI `opencc` 1.4.2）。
+資料來源：OpenCC 原始碼 `README.md` 與 `data/config/*.json`（PyPI `opencc` 1.4.2），經翻譯與改寫。
+OpenCC：Copyright 2010-2026 Carbo Kuo and contributors，依 Apache License 2.0 授權。
 
 ## 正式設定
 

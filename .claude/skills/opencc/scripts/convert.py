@@ -4,6 +4,10 @@
 # ///
 """OpenCC 簡繁轉換工具（agent skill 用）。
 
+轉換引擎與詞典：OpenCC（https://github.com/BYVoid/OpenCC），
+Copyright 2010-2026 Carbo Kuo and contributors，Apache License 2.0。
+DESCRIPTIONS 中的設定說明改寫自 OpenCC README。
+
 用法：
   uv run scripts/convert.py -c s2twp "鼠标里面的硅二极管坏了"
   uv run scripts/convert.py -c t2s -i input.txt -o output.txt
