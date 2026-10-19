@@ -1,5 +1,7 @@
 # cOpenCC
 
+> **提示**：此 repo 內容 100% 由 [Claude Code](https://claude.com/claude-code) 產生。
+
 把 [OpenCC（Open Chinese Convert）](https://github.com/BYVoid/OpenCC) 包裝成跨平台的 agent skill，
 讓 AI 助理以 OpenCC 官方引擎進行中文簡繁轉換與地區用詞轉換，而不是憑記憶逐字替換。
 
