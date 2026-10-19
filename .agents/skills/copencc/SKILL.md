@@ -45,7 +45,7 @@ uv run <skill>/scripts/convert.py -c t2s -i 'input.md' -o 'output.md'
 uv run <skill>/scripts/convert.py -c s2tw < a.txt
 
 # 套用自訂詞彙（優先於內建詞典）
-uv run <skill>/scripts/convert.py -c s2twp --dict terms.tsv -i in.md -o out.md
+uv run <skill>/scripts/convert.py -c s2twp --dict 'terms.tsv' -i 'in.md' -o 'out.md'
 
 # 列出可用設定
 uv run <skill>/scripts/convert.py --list
