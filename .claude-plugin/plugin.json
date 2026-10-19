@@ -1,6 +1,6 @@
 {
   "name": "copencc",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "cOpenCC：使用 OpenCC 進行中文簡繁轉換與地區用詞轉換（簡體↔繁體、台灣正體、香港繁體、自訂詞彙）。Simplified/Traditional Chinese conversion powered by OpenCC.",
   "author": {
     "name": "jamescchuang",

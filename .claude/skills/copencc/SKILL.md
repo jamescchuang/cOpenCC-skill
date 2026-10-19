@@ -5,7 +5,7 @@ license: Apache-2.0 (OpenCC engine and dictionaries; see NOTICE)
 compatibility: Requires Python 3.10+ and network access to PyPI on first run (uv recommended; falls back to pip).
 metadata:
   display-name: cOpenCC
-  version: "1.0.0"
+  version: "1.0.1"
   author: jamescchuang
 ---
 
