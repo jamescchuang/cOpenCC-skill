@@ -1,17 +1,22 @@
 ---
-name: opencc
-description: 使用 OpenCC（Open Chinese Convert）進行中文簡繁轉換與地區用詞轉換，支援簡體↔繁體、台灣正體（含台灣慣用詞，如 软件→軟體、鼠标→滑鼠）、香港繁體、日文新舊字體，以及自訂詞彙表。當使用者要求「簡轉繁」「繁轉簡」「轉成台灣用語」「轉成正體中文」「轉成簡體」、把文件/字幕/程式字串/Markdown 在簡繁之間轉換，或提到 OpenCC、s2t、s2twp、t2s 等設定時使用。Use for Simplified/Traditional Chinese conversion, Taiwan/Hong Kong regional phrase localization.
-argument-hint: "[轉換方向] <文字或檔案路徑>"
+name: copencc
+description: cOpenCC — 使用 OpenCC（Open Chinese Convert）進行中文簡繁轉換與地區用詞轉換，支援簡體↔繁體、台灣正體（含台灣慣用詞，如 软件→軟體、鼠标→滑鼠）、香港繁體、日文新舊字體，以及自訂詞彙表。當使用者要求「簡轉繁」「繁轉簡」「轉成台灣用語」「轉成正體中文」「轉成簡體」、把文件/字幕/程式字串/Markdown 在簡繁之間轉換，或提到 cOpenCC、OpenCC、s2t、s2twp、t2s 等設定時使用。Use for Simplified/Traditional Chinese conversion, Taiwan/Hong Kong regional phrase localization.
+license: Apache-2.0 (OpenCC engine and dictionaries; see NOTICE)
+compatibility: Requires Python 3.10+ and network access to PyPI on first run (uv recommended; falls back to pip).
+metadata:
+  display-name: cOpenCC
+  version: "1.0.0"
+  author: jamescchuang
 ---
 
-# OpenCC 簡繁轉換
+# cOpenCC 簡繁轉換
 
 以官方 OpenCC Python 套件（`opencc` on PyPI，C++ 核心）執行詞彙級轉換，結果與 OpenCC 官方工具一致，
 不要自行逐字替換或憑記憶轉換——OpenCC 會做分詞與詞組優先比對（如「头发→頭髮」「发展→發展」）。
 
-## 以 `/opencc` 呼叫時的參數
+## 以 `/copencc`（或 `$copencc`、`@copencc`）呼叫時的參數
 
-本次參數：`$ARGUMENTS`
+使用者呼叫本 skill 時附帶的文字即為參數（Claude Code 會以 `ARGUMENTS:` 附在訊息後）。
 
 解析規則：
 1. 若第一個詞是有效設定名稱（`s2t`、`t2s`、`s2tw`、`tw2s`、`s2twp`、`tw2sp`、`s2hk`、`hk2s`、`s2hkp`、`hk2sp`、`t2tw`、`tw2t`、`t2hk`、`hk2t`、`t2jp`、`jp2t`，可帶 `.json`），以它作為轉換方向（`-c`），其餘內容為要轉換的對象。
@@ -24,6 +29,7 @@ argument-hint: "[轉換方向] <文字或檔案路徑>"
 ## 使用方式
 
 腳本位於本 skill 的 `scripts/convert.py`，以 `uv run` 執行（依賴由 PEP 723 標頭自動安裝，首次需連網）。
+若環境沒有 `uv`（例如 claude.ai 或 ChatGPT 的程式執行環境），改用 `pip install opencc` 後以 `python <skill>/scripts/convert.py ...` 執行，參數相同。
 以下 `<skill>` 代表本 SKILL.md 所在目錄。
 
 ```bash
@@ -91,4 +97,4 @@ uv run <skill>/scripts/convert.py --list
 
 轉換引擎與詞典來自 [OpenCC](https://github.com/BYVoid/OpenCC)（Copyright 2010-2026 Carbo Kuo and contributors），
 依 [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0) 授權；本 skill 執行時自 PyPI 安裝官方 `opencc` 套件。
-設定說明改寫自 OpenCC 的 README 與設定檔。詳見 repo 根目錄的 `NOTICE` 與 `LICENSES/OpenCC-Apache-2.0.txt`。
+設定說明改寫自 OpenCC 的 README 與設定檔。詳見本 skill 目錄的 `NOTICE` 與 `LICENSE-OpenCC.txt`。

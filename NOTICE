@@ -1,5 +1,5 @@
-opencc-skill
-============
+cOpenCC
+=======
 
 本專案是一個 agent skill，透過 OpenCC 進行中文簡繁轉換。
 This project is an agent skill that performs Chinese script conversion using OpenCC.

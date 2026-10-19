@@ -1,0 +1,43 @@
+cOpenCC
+=======
+
+本專案是一個 agent skill，透過 OpenCC 進行中文簡繁轉換。
+This project is an agent skill that performs Chinese script conversion using OpenCC.
+
+--------------------------------------------------------------------------------
+Third-party software / 第三方軟體
+--------------------------------------------------------------------------------
+
+OpenCC (Open Chinese Convert)
+  https://github.com/BYVoid/OpenCC
+  Copyright 2010-2026 Carbo Kuo and contributors
+  Licensed under the Apache License, Version 2.0
+  Full license text: LICENSE-OpenCC.txt
+
+How OpenCC is used in this project / 本專案使用 OpenCC 的方式：
+
+- scripts/convert.py does not include OpenCC source code or dictionaries. At
+  runtime it installs and calls the official `opencc` package from PyPI
+  (https://pypi.org/project/opencc/), which is distributed under the same
+  Apache License 2.0 together with its dictionaries.
+  scripts/convert.py 未包含 OpenCC 原始碼或詞典，執行時透過 uv 自 PyPI 安裝官方
+  `opencc` 套件並呼叫之；該套件及其詞典依 Apache License 2.0 散布。
+
+- The configuration descriptions in SKILL.md, references/configs.md and the
+  DESCRIPTIONS table in scripts/convert.py are adapted from OpenCC's README.md
+  and data/config/*.json (upstream commit
+  8cf737a4e193db27d675b2ce9867d84aace33745). They have been translated,
+  condensed and reorganized for this skill.
+  SKILL.md、references/configs.md 與 scripts/convert.py 中的設定說明，改寫自
+  OpenCC 的 README.md 與 data/config/*.json（上游 commit 如上），已經過翻譯、
+  精簡與重新編排。
+
+- The custom dictionary feature (--dict) generates a temporary configuration
+  derived from OpenCC's built-in configuration files, using OpenCC's documented
+  "inline" dictionary type.
+  自訂詞彙功能（--dict）會依 OpenCC 內建設定檔產生暫時的衍生設定，並使用 OpenCC
+  文件記載的 inline 字典類型。
+
+This project is not affiliated with or endorsed by the OpenCC project or its
+authors. "OpenCC" is used solely to identify the upstream software.
+本專案與 OpenCC 專案及其作者無隸屬或背書關係；「OpenCC」名稱僅用於指明上游軟體。

@@ -1,0 +1,19 @@
+{
+  "name": "copencc",
+  "owner": {
+    "name": "jamescchuang",
+    "email": "jamescchuang@gmail.com"
+  },
+  "metadata": {
+    "description": "cOpenCC 中文簡繁轉換 skill"
+  },
+  "plugins": [
+    {
+      "name": "copencc",
+      "source": "./",
+      "description": "cOpenCC：使用 OpenCC 進行中文簡繁轉換與地區用詞轉換（簡體↔繁體、台灣正體、香港繁體、自訂詞彙）。",
+      "version": "1.0.0",
+      "category": "productivity"
+    }
+  ]
+}

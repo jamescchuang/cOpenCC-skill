@@ -1,0 +1,3 @@
+interface:
+  display_name: "cOpenCC"
+  short_description: "OpenCC 中文簡繁轉換與台灣/香港地區用詞轉換"
