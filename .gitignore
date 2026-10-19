@@ -1,4 +1,5 @@
 /OpenCC/
 __pycache__/
 .claude/settings.local.json
-dist/
+dist/*
+!dist/copencc.zip
