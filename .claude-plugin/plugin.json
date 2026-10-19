@@ -6,8 +6,8 @@
     "name": "jamescchuang",
     "email": "jamescchuang@gmail.com"
   },
-  "homepage": "https://github.com/jamescchuang/opencc-skill",
-  "repository": "https://github.com/jamescchuang/opencc-skill",
+  "homepage": "https://github.com/jamescchuang/cOpenCC-skill",
+  "repository": "https://github.com/jamescchuang/cOpenCC-skill",
   "license": "Apache-2.0",
   "keywords": ["copencc", "opencc", "chinese", "traditional-chinese", "simplified-chinese", "localization", "zh-TW"]
 }
