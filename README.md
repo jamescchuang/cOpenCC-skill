@@ -52,13 +52,13 @@ Linux x86_64 / aarch64（glibc）。
 本 repo 本身就是一個 plugin marketplace：
 
 ```
-/plugin install copencc --marketplace jamescchuang/opencc-skill
+/plugin install copencc --marketplace jamescchuang/cOpenCC-skill
 ```
 
 舊版 Claude Code（2.1.275 以前）分兩步：
 
 ```
-/plugin marketplace add jamescchuang/opencc-skill
+/plugin marketplace add jamescchuang/cOpenCC-skill
 /plugin install copencc@copencc
 ```
 
@@ -67,8 +67,8 @@ Linux x86_64 / aarch64（glibc）。
 ### Claude Code / Codex / Antigravity：安裝腳本
 
 ```bash
-git clone https://github.com/jamescchuang/opencc-skill.git
-cd opencc-skill
+git clone https://github.com/jamescchuang/cOpenCC-skill.git
+cd cOpenCC-skill
 
 uv run tools/install.py                       # 一次裝到 Claude Code、Codex、Antigravity（使用者層級）
 uv run tools/install.py codex antigravity     # 只裝指定工具（claude / codex / antigravity）
@@ -87,7 +87,7 @@ uv run tools/install.py --uninstall           # 移除
 | Antigravity | `~/.gemini/config/skills/copencc` | `<專案>/.agents/skills/copencc` |
 
 Codex 也可用內建的 skill-installer：在 Codex 中輸入
-`$skill-installer install https://github.com/jamescchuang/opencc-skill/tree/main/skills/copencc`。
+`$skill-installer install https://github.com/jamescchuang/cOpenCC-skill/tree/main/skills/copencc`。
 
 > 直接在本 repo 目錄開啟 Claude Code、Codex 或 Antigravity 時，`.claude/skills/copencc` 與
 > `.agents/skills/copencc` 已預先安裝，可立即使用。
